@@ -56,4 +56,36 @@ const Navigation = ({ onNavClick }) => (
       >
         <Link to="/mobile" onClick={() => onNavClick('Mobile')}>
           <Icon type="mobile" />
-          <span clas
+          <span className="nav-text">Mobile Demo</span>
+        </Link>
+      </Menu.Item>
+    </Menu>
+
+    {/* Pendo Portal Panel */}
+    <div
+      style={{
+        position: 'absolute',
+        bottom: '60px',
+        left: '0',
+        width: '100%',
+        height: '300px',
+        borderTop: '1px solid #e8e8e8',
+        background: '#fff',
+      }}
+    >
+      <iframe
+        src="https://portal.pendo.io/p/0a0b0041-8ba6-4fae-b2b2-b0ad3901beef/K26CreW20znyi0MUt3AGTW_BQb4?container=embed"
+        width="100%"
+        height="100%"
+        frameBorder="0"
+        title="Pendo Portal"
+      />
+    </div>
+
+  </div>
+);
+
+export default Navigation;
+Navigation.propTypes = {
+  onNavClick: PropTypes.func,
+};
