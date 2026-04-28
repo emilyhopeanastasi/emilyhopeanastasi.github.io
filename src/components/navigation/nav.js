@@ -2,16 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Menu, Icon } from 'antd';
-
 import './nav.scss';
-
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
-
-// Navigation bar
-// Only of note is onNavClick is to update the page title as people click on it. That's all
-
-// TODO: #cloud-logo -> #acme-crm-logo, update guide
 
 const Navigation = ({ onNavClick }) => (
   <div className="nav-bar">
@@ -63,15 +56,4 @@ const Navigation = ({ onNavClick }) => (
       >
         <Link to="/mobile" onClick={() => onNavClick('Mobile')}>
           <Icon type="mobile" />
-          <span className="nav-text">Mobile Demo</span>
-        </Link>
-      </Menu.Item>
-    </Menu>
-  </div>
-);
-
-export default Navigation;
-
-Navigation.propTypes = {
-  onNavClick: PropTypes.func,
-};
+          <span clas
